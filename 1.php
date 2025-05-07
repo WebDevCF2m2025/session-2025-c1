@@ -6,10 +6,6 @@
 # contenant le phpsessid
 session_start();
 
-
-
-var_dump($_SESSION);
-
 # pour capturer la date d'arrivée
 if (!isset($_SESSION['arrive'])) {
     $_SESSION['arrive'] = date("Y-m-d H:i:s");
