@@ -11,7 +11,7 @@ if (!isset($_SESSION['arrivee'])) {
 
     $_SESSION['compte'] = 1;
 }
-    $pluriel = $_SESSION['compte'] > 1 ? "s" : ""; 
+    $pluriel = time() - $_SESSION['arrivee'] > 0 ? "s" : ""; 
 ?>
 
 <!DOCTYPE html>
