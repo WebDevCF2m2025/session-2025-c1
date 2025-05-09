@@ -3,7 +3,7 @@
 session_start();
 
 # si on est pas/plus connecté
-if(!isset($_SESSION['monid'])&&$_SESSION['monid']!=session_id()){
+if(!isset($_SESSION['monid'])||$_SESSION['monid']!=session_id()){
 
     # redirection sur l'accueil
     header("Location: ./");
