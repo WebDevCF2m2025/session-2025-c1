@@ -7,7 +7,7 @@
 session_start();
 
 // si nous ne sommes pas connectés, ou plus valablement connecté
-if(!isset($_SESSION['monid'])|| $_SESSION['monid'] !== session_id()) {
+if(!isset($_SESSION['monid']) || $_SESSION['monid'] !== session_id()) {
     // tentative d'attaque (ou time out ;-)
     header("Location: ./");
     exit();
