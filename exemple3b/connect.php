@@ -67,6 +67,10 @@ if(isset($_POST['login'],$_POST['pwd'])) {
     <input type="text" name="login" placeholder="Votre pseudo"><br>
     <input type="password" name="pwd" placeholder="Votre mot de passe"><br>
     <input type="submit" value="Se connecter">
+    <pre>
+        Login : root
+        Password : 123
+    </pre>
 </form>
     <?php
     var_dump($_SESSION);

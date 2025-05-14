@@ -23,9 +23,12 @@ if(!isset($_SESSION['monid']) || $_SESSION['monid'] !== session_id()) {
 </head>
 <body>
     <nav>
-        <a href="./">Accueil</a> | <a href="about.php">À propos de nous</a> | <a href="disconnect.php">Déconnexion</a>
+        <a href="./">Accueil</a> | <a href="about.php">À propos de nous</a> | Administration | <a href="disconnect.php">Déconnexion</a>
     </nav>
 <h1>Exemple 3 | Administration</h1>
+
+        <p>Vous êtes connecté en tant que <?=$_SESSION['login']?></p>
+
 <p>Mon administration protégée</p>
     <?php
     var_dump($_SESSION);

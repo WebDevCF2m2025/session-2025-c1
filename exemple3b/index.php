@@ -19,6 +19,7 @@ session_start();
         Accueil | <a href="about.php">À propos de nous</a> |
         <?php if(isset($_SESSION['monid'])&&$_SESSION['monid']===session_id()):
         ?>
+            <a href="admin.php">Administration</a>
             <a href="disconnect.php">Déconnexion</a>
         <?php
         else:
@@ -29,6 +30,13 @@ session_start();
         ?>
     </nav>
 <h1>Exemple 3 | Accueil</h1>
+    <?php
+    if(isset($_SESSION['login'])):
+        ?>
+        <p>Vous êtes connecté en tant que <?=$_SESSION['login']?></p>
+    <?php
+    endif;
+    ?>
 <p>Du blabla de la page d'accueil</p>
     <?php
     var_dump($_SESSION);
