@@ -1,6 +1,7 @@
 <?php
 session_start();
-?>
+require_once('config.php')
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,9 +13,27 @@ session_start();
 
 <body>
     <nav>
-        <a href="index.php">Accueil</a> | <a href="connexion.php"> Connexion</a>
+        <a href="index.php">Accueil</a> | <?php if (isset($_SESSION['monid']) && $_SESSION['monid'] === session_id()):
+            ?>
+            <a href="admin.php">Admin</a>
+
+            <a href="deconexion.php">Déconnexion</a>
+            <?php
+        else:
+            ?>
+            <a href="connexion.php">Connexion</a>
+            <?php
+        endif;
+        ?>
     </nav>
     <h1>Exemple 3 | A propos</h1>
+    <?php
+    if (isset($_SESSION['login'])) {
+        ?>
+        <p>hello <?= $login ?></p>
+
+    <?php }
+    ?>
 </body>
 
 
